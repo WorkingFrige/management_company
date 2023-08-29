@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'PTRootUI';
+  src: url('../fonts/PT-Root-UI_Regular.woff2') format('woff2'),
+  url('../fonts/PT-Root-UI_Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTRootUI';
+  src: url('../fonts/PT-Root-UI_Medium.woff2') format('woff2'),
+  url('../fonts/PT-Root-UI_Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTRootUI';
+  src: url('../fonts/PT-Root-UI_Bold.woff2') format('woff2'),
+  url('../fonts/PT-Root-UI_Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Druk Cyr';
+  src: url('../fonts/DrukCyr-Medium.woff2') format('woff2'),
+  url('../fonts/DrukCyr-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+// ----------------------------style----------------------------
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  line-height: normal;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+[class*="__container"] {
+  //max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 2.5em;
+}
+
+body {
+  //font-family: 'Druk Cyr';
+  font-family: 'PTRootUI';
+  font-weight: 500;
+  font-size: 16px;
+  color: #2E2E2E;
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+}
