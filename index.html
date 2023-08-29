@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style/starter.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/media.css">
+
+    <script src="https://unpkg.com/inputmask@5.0.9-beta.7/dist/inputmask.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="script/main.js" defer></script>
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <svg width="69" height="16" viewBox="0 0 69 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 13.8496H7.86212V12.078H2.19408V2.15042H0V13.8496Z" fill="#2E2E2E"/>
+                    <path
+                        d="M13.523 14C16.9056 14 19.1911 11.9276 19.1911 8.43454V7.56546C19.1911 4.05571 16.9421 2 13.523 2C10.1405 2 7.85498 4.08914 7.85498 7.56546V8.43454C7.85498 11.9443 10.1039 14 13.523 14ZM13.523 12.1281C11.5484 12.1281 10.1588 10.8579 10.1588 8.43454V7.56546C10.1588 5.10864 11.5118 3.87187 13.523 3.87187C15.4794 3.87187 16.8873 5.15877 16.8873 7.56546V8.43454C16.8873 10.8914 15.516 12.1281 13.523 12.1281Z"
+                        fill="#2E2E2E"/>
+                    <path
+                        d="M25.864 9.50418H29.1551C28.9357 11.3928 27.8935 12.1281 26.0469 12.1281C24.1088 12.1281 22.774 10.9248 22.774 8.45125V7.54875C22.774 5.00836 23.9442 3.87187 26.0469 3.87187C27.5461 3.87187 28.4238 4.67409 28.7895 5.74373H31.1664C30.8007 3.67131 28.9723 2 26.0469 2C22.5363 2 20.4702 3.97215 20.4702 7.54875V8.45125C20.4702 12.0446 22.6095 14 26.0469 14C29.2831 14 31.2578 12.195 31.2578 8.66852V7.79944H25.864V9.50418Z"
+                        fill="#2E2E2E"/>
+                    <path
+                        d="M38.2 14C41.5826 14 43.8681 11.9276 43.8681 8.43454V7.56546C43.8681 4.05571 41.6191 2 38.2 2C34.8175 2 32.532 4.08914 32.532 7.56546V8.43454C32.532 11.9443 34.7809 14 38.2 14ZM38.2 12.1281C36.2253 12.1281 34.8358 10.8579 34.8358 8.43454V7.56546C34.8358 5.10864 36.1888 3.87187 38.2 3.87187C40.1564 3.87187 41.5643 5.15877 41.5643 7.56546V8.43454C41.5643 10.8914 40.193 12.1281 38.2 12.1281Z"
+                        fill="#2E2E2E"/>
+                    <path d="M43.8666 3.92201H47.7977V13.8496H49.9918V3.92201H53.9228V2.15042H43.8666V3.92201Z"
+                          fill="#2E2E2E"/>
+                    <path d="M55.2041 13.8496H57.3982V2.15042H55.2041V13.8496Z" fill="#2E2E2E"/>
+                    <path
+                        d="M59.6752 13.8496H61.8692V9.87187H64.0633C67.3362 9.87187 69 8.35097 69 6.01114C69 3.52089 67.5007 2.15042 64.0633 2.15042H59.6752V13.8496ZM64.0633 3.92201C65.8734 3.92201 66.6962 4.67409 66.6962 6.01114C66.6962 7.28134 65.8003 8.10028 64.0633 8.10028H61.8692V3.92201H64.0633Z"
+                        fill="#2E2E2E"/>
+                </svg>
+            </a>
+            <nav class="header__nav navigation" aria-label="Навигация по сайту">
+                <ul class="header__nav-ul navigation-ul">
+                    <li class="header__nav-ul_item navigation-ul_item able_to_open button">
+                        <button class="button">
+                            управление недвижимостью
+                            <span></span>
+                        </button>
+                        <ul class="header__nav-ul_item-inner navigation-ul_item-inner inner__ul">
+                            <li class="inner__ul-item button button-link">Технический аудит недвижимости</li>
+                            <li class="inner__ul-item button button-link">Эксплуатация и техническое обслуживание
+                                недвижимости
+                            </li>
+                            <li class="inner__ul-item button button-link">Пожарная безопасность</li>
+                            <li class="inner__ul-item button button-link">Клининг</li>
+                            <li class="inner__ul-item button button-link">Управление арендными отношениями</li>
+                            <li class="inner__ul-item button button-link">Аварийно-диспетчерская служба</li>
+                        </ul>
+                    </li>
+                    <li class="header__nav-ul_item navigation-ul_item button"><a href="">продажа и аренда</a></li>
+                    <li class="header__nav-ul_item navigation-ul_item able_to_open button">
+                        <button class="button">
+                            консалтинг
+                            <span></span>
+                        </button>
+                        <ul class="header__nav-ul_item-inner navigation-ul_item-inner inner__ul">
+                            <li class="inner__ul-item button button-link">Бухгалтерские и кадровые услуги</li>
+                            <li class="inner__ul-item button button-link">Юридическое сопровождение</li>
+                        </ul>
+                    </li>
+                </ul>
+                <button class="header__nav-callback button button-link callback-button navigation-callback"
+                        data-open="callback">
+                    связаться с нами
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E"
+                              stroke-width="1.5"
+                              stroke-linejoin="bevel"/>
+                    </svg>
+                </button>
+            </nav>
+            <button class="header__callback button button-link callback-button" data-open="callback">
+                связаться с нами
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E" stroke-width="1.5"
+                          stroke-linejoin="bevel"/>
+                </svg>
+            </button>
+            <button class="header__burger link button-link" id="burger">
+                <span class="burger"><span></span></span>
+                <span class="burger__text">Меню</span>
+            </button>
+        </div>
+    </header>
+    <main class="main">
+        <section class="hero">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__content-title">Управляющая компания и брокер <br> с базой недвижимости <br> в 7
+                        городах России</h1>
+                    <p class="hero__content-text lead">Снимаем с владельцев зданий все задачи <br> по администрированию
+                        и подбираем
+                        недвижимость для инвестиций, покупки и аренды.</p>
+                </div>
+            </div>
+            <div class="hero_background"></div>
+        </section>
+        <section class="statistics">
+            <div class="statistics__container">
+                <div class="statistics__content">
+                    <h2 class="statistics__content-title">Под нашим управлением</h2>
+                    <div class="statistics__content-info">
+                        <div class="statistics__content-info_item statistics__item">
+                            <h4 class="statistics__item-title accent">300 га</h4>
+                            <p class="statistics__item-description primary hundred">земли</p>
+                        </div>
+                        <div class="statistics__content-info_item statistics__item">
+                            <h4 class="statistics__item-title accent">4 000 000 м²</h4>
+                            <p class="statistics__item-description primary hundred">жилой и коммерческой
+                                недвижимости</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="work-with">
+            <div class="work-with__container">
+                <h2 class="work-with__title">С кем мы сотрудничаем</h2>
+                <div class="work-with__cards">
+                    <div class="work-with__cards-item work-with__card">
+                        <img src="img/work-with/work-pic_1.svg" alt="" class="work-with__card-img">
+                        <h3 class="work-with__card-title">С арендодателями</h3>
+                        <p class="work-with__card-text primary">Берём на себя все заботы по управлению помещениями: ищем
+                            арендаторов, решаем юридические вопросы, готовим налоговые отчёты и нанимаем персонал.</p>
+                        <a href="#" class="work-with__card-link button button-link">
+                            подробнее
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                 fill="none">
+                                <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E"
+                                      stroke-width="1.5"
+                                      stroke-linejoin="bevel"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="work-with__cards-item work-with__card">
+                        <img src="img/work-with/work-pic_2.svg" alt="" class="work-with__card-img">
+                        <h3 class="work-with__card-title">С инвесторами и бизнесом</h3>
+                        <p class="work-with__card-text primary">Подбираем помещения под любую задачу. Бизнесу — под
+                            офисы и склады. Инвесторам — коммерческую недвижимость, которую можно будет сдавать в
+                            аренду.</p>
+                        <a href="#" class="work-with__card-link button button-link">
+                            подробнее
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                 fill="none">
+                                <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E"
+                                      stroke-width="1.5"
+                                      stroke-linejoin="bevel"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="work-with__cards-item work-with__card">
+                        <img src="img/work-with/work-pic_3.svg" alt="" class="work-with__card-img">
+                        <h3 class="work-with__card-title">С другими управляющими компаниями</h3>
+                        <p class="work-with__card-text primary">Предоставляем услуги своей аварийно-диспетчерской
+                            службы: устраняем поломки и следим за исправностью всех внутридомовых систем.</p>
+                        <a href="#" class="work-with__card-link button button-link">
+                            подробнее
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                                 fill="none">
+                                <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E"
+                                      stroke-width="1.5"
+                                      stroke-linejoin="bevel"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="features" style="display:none;">
+            <div class="features__container">
+                <div class="features__title__container">
+                    <h2 class="features__title">Нас выбирают, потому что <br> мы автоматизируем все процессы <br> и
+                        предлагаем
+                        комплексные решения</h2>
+                </div>
+                <section class="features__item">
+                    <div class="features__item-left">
+                        <h5 class="features__item-left_number accent">01</h5>
+                        <div class="features__item-left_text">
+                            <h3 class="features__item-left_text-title">Клиенты «Предприятия» следят за расходами
+                                онлайн</h3>
+                            <p class="features__item-left_text-description primary">Для этого у нас есть программа
+                                Oddin.
+                                Там
+                                мы публикуем отчёты о проделанной работе, например если заменили лампочку или устранили
+                                аварию. Всё с фото, датами и чеками.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="img/features/photo_1.png" alt="" class="features__item-right">
+                </section>
+                <section class="features__item">
+                    <div class="features__item-left">
+                        <h5 class="features__item-left_number accent">02</h5>
+                        <div class="features__item-left_text">
+                            <h3 class="features__item-left_text-title">Налаживаем управление зданием с нуля</h3>
+                            <p class="features__item-left_text-description primary">Оснащаем техникой, например
+                                системой дымоудаления или сигнализацией. Нанимаем персонал в охрану, клининг и
+                                администрацию.
+                            </p>
+                        </div>
+                    </div>
+                    <img src="img/features/photo_2.png" alt="" class="features__item-right">
+                </section>
+                <section class="features__item">
+                    <div class="features__item-left">
+                        <h5 class="features__item-left_number accent">03</h5>
+                        <div class="features__item-left_text">
+                            <h3 class="features__item-left_text-title">Наша команда — эксперты в управлении
+                                недвижимостью</h3>
+                            <p class="features__item-left_text-description primary">Они знают, как организовать
+                                процессы, чтобы доход клиента был максимальным, а участие в администрировании —
+                                минимальным.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="features__item-right features__slider">
+                        <div class="features__slider-item features__slide"
+                             style="background-image: url('img/features/workers/person-1.png')">
+                            <p class="features__slide-position blur__item caption">генеральный директор</p>
+                            <h4 class="features__slide-title card-title">Фамилия Имя Отчество</h4>
+                            <p class="features__slide-description secondary">Опыт работы в сфере недвижимости, в том
+                                числе международной с 2000 года</p>
+                            <div class="features__slide-contacts">
+                                <a href="tel:+79270000000" class="features__slide-contacts-item link">+7 (927)
+                                    000-00-00</a>
+                                <a href="mailto:example@info.com" class="features__slide-contacts-item link">example@info.com</a>
+                            </div>
+                        </div>
+                        <div class="features__slider-item features__slide"
+                             style="background-image: url('img/features/workers/person-1.png')">
+                            <p class="features__slide-position blur__item caption">генеральный директор</p>
+                            <h4 class="features__slide-title card-title">Фамилия Имя Отчество</h4>
+                            <p class="features__slide-description secondary">Опыт работы в сфере недвижимости, в том
+                                числе международной с 2000 года</p>
+                            <div class="features__slide-contacts">
+                                <a href="tel:+79270000000" class="features__slide-contacts-item link">+7 (927)
+                                    000-00-00</a>
+                                <a href="mailto:example@info.com" class="features__slide-contacts-item link">example@info.com</a>
+                            </div>
+                        </div>
+                        <div class="features__slider-item features__slide"
+                             style="background-image: url('img/features/workers/person-1.png')">
+                            <p class="features__slide-position blur__item caption">генеральный директор</p>
+                            <h4 class="features__slide-title card-title">Фамилия Имя Отчество</h4>
+                            <p class="features__slide-description secondary">Опыт работы в сфере недвижимости, в том
+                                числе международной с 2000 года</p>
+                            <div class="features__slide-contacts">
+                                <a href="tel:+79270000000" class="features__slide-contacts-item link">+7 (927)
+                                    000-00-00</a>
+                                <a href="mailto:example@info.com" class="features__slide-contacts-item link">example@info.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <!--    Перезагружайте страницу при адаптивном тестировании для корректной работы слайдера    -->
+        <section class="news">
+            <div class="news__container">
+                <div class="news__top">
+                    <h2 class="news__top-title">Наши новости</h2>
+                    <a href="#" class="news__top-link button button-link">
+                        все новости
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                             fill="none">
+                            <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E"
+                                  stroke-width="1.5"
+                                  stroke-linejoin="bevel"/>
+                        </svg>
+                    </a>
+                    <div class="news__top-control">
+                        <button class="news__top-control_item swiper-prev">
+                            <img src="img/slider/arrow_left.svg" alt="Предыдущий слайд">
+                        </button>
+                        <button class="news__top-control_item swiper-next">
+                            <img src="img/slider/arrow_right.svg" alt="Следующий слайд">
+                        </button>
+                    </div>
+                </div>
+                <div class="news__content-wrapper swiper">
+                    <div class="news__content swiper-wrapper">
+                        <div class="news__content-item news__content-item_tall news__item swiper-slide"
+                             style="background: url('img/news/article_1.png')">
+                            <p class="news__item-date blur__item caption">02 ⁄ 03 ⁄ 22</p>
+                            <h4 class="news__item-title card-title">Заголовок новости</h4>
+                            <p class="news__item-text secondary">Также как реализация намеченных плановых заданий
+                                предполагает независимые способы реализации плановых заданий предполагает независимые
+                                дальнейших действий.</p>
+                        </div>
+                        <div class="news__content-item news__content-item_tall news__item swiper-slide"
+                             style="background: url('img/news/article_2.png')">
+                            <p class="news__item-date blur__item caption">22 ⁄ 02 ⁄ 22</p>
+                            <h4 class="news__item-title card-title">Заголовок новости</h4>
+                            <p class="news__item-text secondary">Также как реализация намеченных плановых заданий
+                                предполагает независимые способы реализации плановых заданий предполагает независимые
+                                дальнейших действий.</p>
+                        </div>
+                        <div class="news__content-column swiper-slide">
+                            <div class="news__content-item news__item">
+                                <p class="news__item-date blur__item caption">13 ⁄ 02 ⁄ 22</p>
+                                <h4 class="news__item-title card-title">Длинный заголовок новости в две строки</h4>
+                                <p class="news__item-text secondary">Также как реализация намеченных плановых заданий
+                                    предполагает независимые способы реализации плановых заданий предполагает
+                                    независимые
+                                    дальнейших действий.</p>
+                            </div>
+                            <div class="news__content-item news__item">
+                                <p class="news__item-date blur__item caption">01 ⁄ 02 ⁄ 22</p>
+                                <h4 class="news__item-title card-title">Заголовок новости</h4>
+                                <p class="news__item-text secondary">Также как реализация намеченных плановых заданий
+                                    предполагает независимые способы реализации плановых заданий предполагает
+                                    независимые
+                                    дальнейших действий.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news__bottom">
+                    <a href="#" class="news__bottom-link button button-link">
+                        все новости
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+                             fill="none">
+                            <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E"
+                                  stroke-width="1.5"
+                                  stroke-linejoin="bevel"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" style="display:none;">
+        <div class="footer__top"></div>
+        <div class="footer__container">
+            <div class="footer__bottom">
+                <a href="index.html" class="header__logo">
+                    <svg width="69" height="16" viewBox="0 0 69 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 13.8496H7.86212V12.078H2.19408V2.15042H0V13.8496Z" fill="#2E2E2E"/>
+                        <path
+                            d="M13.523 14C16.9056 14 19.1911 11.9276 19.1911 8.43454V7.56546C19.1911 4.05571 16.9421 2 13.523 2C10.1405 2 7.85498 4.08914 7.85498 7.56546V8.43454C7.85498 11.9443 10.1039 14 13.523 14ZM13.523 12.1281C11.5484 12.1281 10.1588 10.8579 10.1588 8.43454V7.56546C10.1588 5.10864 11.5118 3.87187 13.523 3.87187C15.4794 3.87187 16.8873 5.15877 16.8873 7.56546V8.43454C16.8873 10.8914 15.516 12.1281 13.523 12.1281Z"
+                            fill="#2E2E2E"/>
+                        <path
+                            d="M25.864 9.50418H29.1551C28.9357 11.3928 27.8935 12.1281 26.0469 12.1281C24.1088 12.1281 22.774 10.9248 22.774 8.45125V7.54875C22.774 5.00836 23.9442 3.87187 26.0469 3.87187C27.5461 3.87187 28.4238 4.67409 28.7895 5.74373H31.1664C30.8007 3.67131 28.9723 2 26.0469 2C22.5363 2 20.4702 3.97215 20.4702 7.54875V8.45125C20.4702 12.0446 22.6095 14 26.0469 14C29.2831 14 31.2578 12.195 31.2578 8.66852V7.79944H25.864V9.50418Z"
+                            fill="#2E2E2E"/>
+                        <path
+                            d="M38.2 14C41.5826 14 43.8681 11.9276 43.8681 8.43454V7.56546C43.8681 4.05571 41.6191 2 38.2 2C34.8175 2 32.532 4.08914 32.532 7.56546V8.43454C32.532 11.9443 34.7809 14 38.2 14ZM38.2 12.1281C36.2253 12.1281 34.8358 10.8579 34.8358 8.43454V7.56546C34.8358 5.10864 36.1888 3.87187 38.2 3.87187C40.1564 3.87187 41.5643 5.15877 41.5643 7.56546V8.43454C41.5643 10.8914 40.193 12.1281 38.2 12.1281Z"
+                            fill="#2E2E2E"/>
+                        <path d="M43.8666 3.92201H47.7977V13.8496H49.9918V3.92201H53.9228V2.15042H43.8666V3.92201Z"
+                              fill="#2E2E2E"/>
+                        <path d="M55.2041 13.8496H57.3982V2.15042H55.2041V13.8496Z" fill="#2E2E2E"/>
+                        <path
+                            d="M59.6752 13.8496H61.8692V9.87187H64.0633C67.3362 9.87187 69 8.35097 69 6.01114C69 3.52089 67.5007 2.15042 64.0633 2.15042H59.6752V13.8496ZM64.0633 3.92201C65.8734 3.92201 66.6962 4.67409 66.6962 6.01114C66.6962 7.28134 65.8003 8.10028 64.0633 8.10028H61.8692V3.92201H64.0633Z"
+                            fill="#2E2E2E"/>
+                    </svg>
+                </a>
+                <nav class="footer__nav navigation" aria-label="Навигация по сайту">
+                    <ul class="footer__nav-ul navigation-ul">
+                        <li class="footer__nav-ul_item navigation-ul_item able_to_open button">
+                            <button class="button">
+                                управление недвижимостью
+                                <span></span>
+                            </button>
+                            <ul class="footer__nav-ul_item-inner navigation-ul_item-inner inner__ul">
+                                <li class="inner__ul-item button button-link">Технический аудит недвижимости</li>
+                                <li class="inner__ul-item button button-link">Эксплуатация и техническое обслуживание
+                                    недвижимости
+                                </li>
+                                <li class="inner__ul-item button button-link">Пожарная безопасность</li>
+                                <li class="inner__ul-item button button-link">Клининг</li>
+                                <li class="inner__ul-item button button-link">Управление арендными отношениями</li>
+                                <li class="inner__ul-item button button-link">Аварийно-диспетчерская служба</li>
+                            </ul>
+                        </li>
+                        <li class="footer__nav-ul_item navigation-ul_item button"><a href="">продажа и аренда</a></li>
+                        <li class="footer__nav-ul_item navigation-ul_item able_to_open button">
+                            <button class="button">
+                                консалтинг
+                                <span></span>
+                            </button>
+                            <ul class="footer__nav-ul_item-inner navigation-ul_item-inner inner__ul">
+                                <li class="inner__ul-item button button-link">Бухгалтерские и кадровые услуги</li>
+                                <li class="inner__ul-item button button-link">Юридическое сопровождение</li>
+                            </ul>
+                        </li>
+                        <li class="footer__nav-ul_item navigation-ul_item button"><a href="">новости</a></li>
+                    </ul>
+                    <button class="footer__nav-callback button button-link callback-button navigation-callback">
+                        связаться с нами
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E"
+                                  stroke-width="1.5"
+                                  stroke-linejoin="bevel"/>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <section class="modal modal__callback">
+        <header class="modal__header">
+            <div class="modal__header__container">
+                <a href="index.html" class="modal__header-logo">
+                    <svg width="69" height="16" viewBox="0 0 69 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 13.8496H7.86212V12.078H2.19408V2.15042H0V13.8496Z" fill="#fff"/>
+                        <path
+                            d="M13.523 14C16.9056 14 19.1911 11.9276 19.1911 8.43454V7.56546C19.1911 4.05571 16.9421 2 13.523 2C10.1405 2 7.85498 4.08914 7.85498 7.56546V8.43454C7.85498 11.9443 10.1039 14 13.523 14ZM13.523 12.1281C11.5484 12.1281 10.1588 10.8579 10.1588 8.43454V7.56546C10.1588 5.10864 11.5118 3.87187 13.523 3.87187C15.4794 3.87187 16.8873 5.15877 16.8873 7.56546V8.43454C16.8873 10.8914 15.516 12.1281 13.523 12.1281Z"
+                            fill="#fff"/>
+                        <path
+                            d="M25.864 9.50418H29.1551C28.9357 11.3928 27.8935 12.1281 26.0469 12.1281C24.1088 12.1281 22.774 10.9248 22.774 8.45125V7.54875C22.774 5.00836 23.9442 3.87187 26.0469 3.87187C27.5461 3.87187 28.4238 4.67409 28.7895 5.74373H31.1664C30.8007 3.67131 28.9723 2 26.0469 2C22.5363 2 20.4702 3.97215 20.4702 7.54875V8.45125C20.4702 12.0446 22.6095 14 26.0469 14C29.2831 14 31.2578 12.195 31.2578 8.66852V7.79944H25.864V9.50418Z"
+                            fill="#fff"/>
+                        <path
+                            d="M38.2 14C41.5826 14 43.8681 11.9276 43.8681 8.43454V7.56546C43.8681 4.05571 41.6191 2 38.2 2C34.8175 2 32.532 4.08914 32.532 7.56546V8.43454C32.532 11.9443 34.7809 14 38.2 14ZM38.2 12.1281C36.2253 12.1281 34.8358 10.8579 34.8358 8.43454V7.56546C34.8358 5.10864 36.1888 3.87187 38.2 3.87187C40.1564 3.87187 41.5643 5.15877 41.5643 7.56546V8.43454C41.5643 10.8914 40.193 12.1281 38.2 12.1281Z"
+                            fill="#fff"/>
+                        <path d="M43.8666 3.92201H47.7977V13.8496H49.9918V3.92201H53.9228V2.15042H43.8666V3.92201Z"
+                              fill="#fff"/>
+                        <path d="M55.2041 13.8496H57.3982V2.15042H55.2041V13.8496Z" fill="#fff"/>
+                        <path
+                            d="M59.6752 13.8496H61.8692V9.87187H64.0633C67.3362 9.87187 69 8.35097 69 6.01114C69 3.52089 67.5007 2.15042 64.0633 2.15042H59.6752V13.8496ZM64.0633 3.92201C65.8734 3.92201 66.6962 4.67409 66.6962 6.01114C66.6962 7.28134 65.8003 8.10028 64.0633 8.10028H61.8692V3.92201H64.0633Z"
+                            fill="#fff"/>
+                    </svg>
+                </a>
+                <button class="modal__header-close" aria-label="Закрыть модальное окно" data-modal="close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M14.2318 16.0001L7.11566 23.1162L8.88343 24.884L15.9995 17.7679L23.1157 24.884L24.8834 23.1162L17.7673 16.0001L24.8834 8.88398L23.1157 7.11621L15.9995 14.2323L8.88343 7.11621L7.11566 8.88398L14.2318 16.0001Z"
+                              fill="white"/>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <div class="modal__container modal-callback__container modal__callback-main">
+            <div class="modal__error">
+                <p class="lead">Что-то пошло не так... Попробуйте перегрузить страницу и попробуйте снова</p>
+            </div>
+            <div class="modal__top">
+                <h1 class="modal__title modal__top-title">связаться с нами</h1>
+                <p class="modal__description modal__top-description lead">Закажите обратный звонок, или звоните и пишите
+                    нам, чтобы обсудить подробности.</p>
+            </div>
+            <div class="modal__bottom">
+                <div class="modal__bottom-contacts modal__contacts">
+                    <div class="modal__contacts-item">
+                        <p class="modal__contacts-item_description caption">пишите</p>
+                        <a href="mailto:info@info.com" class="modal__contacts-item_link">info@info.com</a>
+                    </div>
+                    <div class="modal__contacts-item">
+                        <p class="modal__contacts-item_description caption">звоните</p>
+                        <a href="tel:+78000000000" class="modal__contacts-item_link">8 (800) 000-00-00</a>
+                    </div>
+                </div>
+                <form action="javascript:void(0);" class="modal__bottom-form">
+                    <div class="modal__bottom-form_item input-item">
+                        <input type="text" class="modal__bottom-form_input accent no-digits text" id="cb_name" required>
+                        <label for="cb_name" class="accent">Ваше имя</label>
+                        <p class="input-item__error caption">имя должно состоять только из букв А-Я, A-Z</p>
+                    </div>
+                    <div class="modal__bottom-form_item input-item">
+                        <input type="text" inputmode="numeric" class="modal__bottom-form_input accent phone"
+                               id="cb_phone" required>
+                        <label for="cb_phone" class="accent">Телефон</label>
+                        <p class="input-item__error caption">проверьте правильность введённого номера</p>
+                    </div>
+                    <button type="submit" class="modal__bottom-form_button button button-link">
+                        заказать обратный звонок
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E"
+                                  stroke-width="1.5"
+                                  stroke-linejoin="bevel"/>
+                        </svg>
+                    </button>
+                    <p class="modal__bottom-form_agreement caption">Нажимая на кнопку «Заказать обратный звонок», вы
+                        даете согласие на обработку персональных данных и соглашаетесь с <a href="#" class="link-small">политикой
+                            конфиденциальности</a></p>
+                </form>
+            </div>
+        </div>
+        <div class="modal__container modal-callback__container modal__callback-sended modal__success">
+            <div class="modal__success-content">
+                <img class="modal__success-content_img" src="img/modal/phone-success.svg" alt>
+                <h1 class="modal__success-content_title">Звонок успешно заказан!</h1>
+                <p class="modal__success-content_description lead">В ближайшее время наш менеджер свяжется с вами.</p>
+                <button class="modal__success-content_button button button-link" data-modal="close">
+                    вернуться на главную
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M4.5 5.5H11.5M11.5 5.5V12.5M11.5 5.5L5.01852 11.9815" stroke="#2E2E2E"
+                              stroke-width="1.5"
+                              stroke-linejoin="bevel"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="preloader" id="preloader">
+        <div class="waveform">
+            <div class="waveform__bar"></div>
+            <div class="waveform__bar"></div>
+            <div class="waveform__bar"></div>
+            <div class="waveform__bar"></div>
+        </div>
+    </section>
+
+
+</div>
+</body>
+
+<script>
+    const preloader = document.getElementById('preloader');
+
+    window.onload = () => {
+        console.log('loaded')
+        preloader.classList.add('loaded_hiding');
+        window.setTimeout(function () {
+            preloader.classList.add('loaded');
+            preloader.classList.remove('loaded_hiding');
+        }, 1500);
+    }
+</script>
+</html>
