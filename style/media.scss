@@ -1,0 +1,405 @@
+@media screen and (max-width: 1149.98px) {
+  .statistics {
+
+    &__content {
+      background-image: url('../img/statistics/map_cut.png');
+    }
+  }
+}
+
+@media screen and (max-width: 1029.98px) {
+  h1 {
+    font-size: 78px;
+    line-height: 100%;
+    letter-spacing: 0.03vw;
+  }
+
+  h2 {
+    font-size: 50px;
+    line-height: 100%;
+    letter-spacing: 0.03vw;
+  }
+
+  .accent {
+    font-size: 34px;
+    line-height: 110%;
+    letter-spacing: 0.03vw;
+  }
+
+  .card-title {
+    font-size: 28px;
+    line-height: 100%;
+    letter-spacing: 0.03vw;
+  }
+
+  .button-big {
+    font-size: 24px;
+    line-height: 96%;
+    letter-spacing: 0.015vw;
+  }
+
+  // components
+
+  .header {
+
+    &__nav {
+      position: absolute;
+      background-color: #2E2E2E;
+      top: 64px;
+      height: calc(100vh - 64px);
+      border: none;
+      color: #fff;
+      align-items: baseline;
+      flex-direction: column;
+      padding-left: 0;
+      overflow-y: scroll;
+      transition: opacity .2s ease-in-out;
+      opacity: 0;
+      pointer-events: none;
+
+      &.active {
+        pointer-events: all;
+        opacity: 1;
+        animation: linesAnimTranslateTop .4s linear;
+        transition: opacity .2s ease-in-out;
+      }
+
+      button {
+        color: #fff;
+      }
+
+      &-callback {
+        display: flex;
+        height: fit-content;
+        align-self: flex-end;
+        justify-content: center;
+        background-color: #fff;
+        padding: 24px 0;
+        color: #000 !important;
+      }
+
+      &-ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 0;
+        flex: 1 1 auto;
+        width: 100%;
+        height: fit-content;
+
+        &_item {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          height: fit-content;
+          align-items: baseline;
+
+          button, a {
+            padding: 12px 15px;
+          }
+
+          &.able_to_open {
+
+            button {
+              padding-bottom: 10px;
+            }
+
+            span::after, span::before {
+              background-color: #fff;
+            }
+
+            span {
+              border-color: #4D4D4D;
+            }
+
+            .inner__ul {
+              visibility: hidden;
+              position: relative;
+              top: 0;
+              background-color: #2E2E2E;
+              border-left: none;
+              border-right: none;
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              border-color: #4D4D4D;
+              //padding: 12px 0;
+
+              &-item {
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__callback {
+      margin-left: 0;
+      padding: 0 15px;
+      max-width: 195px;
+    }
+
+    &__logo {
+      width: 100%;
+      padding: 0 15px;
+    }
+
+    &__burger {
+      display: flex;
+      line-height: 100%;
+      letter-spacing: -0.7px;
+      width: fit-content;
+      padding: 0 15px;
+
+      .burger {
+        span, &::before, &::after {
+          transition: background-color .3s ease-in-out, opacity .2s ease-in-out, transform .2s ease-in-out;
+        }
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          .burger {
+            span, &::before, &::after {
+              background-color: #fff;
+            }
+          }
+        }
+      }
+
+      &.active {
+        .burger {
+          span {
+            opacity: 0;
+          }
+
+          &::before {
+            transform: translateY(6px) rotateZ(-45deg);
+          }
+
+          &::after {
+            transform: translateY(-6px) rotateZ(45deg);
+          }
+        }
+      }
+
+      &-text {
+        position: relative;
+      }
+
+      span.burger {
+        position: relative;
+        width: 16px;
+        height: 14px;
+        margin-right: 4px;
+
+        span, &::after, &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          height: 2px;
+          width: 16px;
+          background-color: #2E2E2E;
+        }
+
+        span {
+          top: 6px;
+        }
+
+        &::after {
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  .work-with {
+    &__card {
+      max-width: 50%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 999px){
+  .news__item, .news__content-column {
+    max-width: 50%;
+    width: 100%;
+
+    .news__item {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .news__content-column {
+    overflow-y: auto;
+  }
+
+  .news__top {
+
+    &-link {
+      display: none;
+    }
+
+    &-control {
+      display: flex;
+    }
+  }
+
+  .news__bottom {
+
+    &-link {
+      display: flex;
+    }
+  }
+}
+
+
+@media screen and (max-width: 859.98px) {
+  .modal {
+
+    &__container {
+      justify-content: normal;
+    }
+
+    &__bottom {
+      flex-direction: column-reverse;
+      height: 100%;
+    }
+
+    &__contacts {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: auto;
+    }
+
+  }
+}
+
+
+@media screen and (max-width: 778.98px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .accent {
+    font-size: 28px;
+  }
+
+  // components
+
+
+  .statistics {
+
+    &__content {
+      background-size: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 629.98px) {
+  [class*=__container] {
+    padding: 0 0.5em;
+  }
+
+  .header {
+    height: 48px;
+
+    &__callback {
+      display: none;
+    }
+
+    &__nav {
+      top: 48px;
+      height: calc(100vh - 48px);
+    }
+  }
+
+  .modal {
+    &__error {
+      height: 48px;
+
+      .lead {
+        font-size: 16px;
+      }
+    }
+
+    &__container {
+      padding: 70px 15px 30px !important;
+    }
+
+    &__header {
+      height: 48px;
+    }
+
+    &__description {
+      font-size: 16px;
+    }
+
+    &__bottom {
+
+      &-form {
+
+        &_button {
+          padding: 20px;
+        }
+      }
+    }
+
+    &__success {
+      &-content {
+        height: 100%;
+        width: 100%;
+
+        &_button {
+          margin-top: auto;
+          height: fit-content;
+          display: flex;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .statistics {
+
+    &__content {
+
+      &-info {
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+  }
+
+
+  .work-with {
+
+    &__card {
+      max-width: 100%;
+    }
+  }
+}
+
+
+@media screen and (max-width: 579px){
+  .news__item, .news__content-column {
+    max-width: 100%;
+    width: 100%;
+
+    .news__item {
+      max-width: 100%;
+      height: 50%;
+    }
+  }
+}
